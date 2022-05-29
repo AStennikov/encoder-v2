@@ -1,5 +1,7 @@
 # Encoder v2
 
+## About
+
 This is the new and cleaner version of the encoder firmware.
 
 ## Toolchain
@@ -19,5 +21,6 @@ Below is a rough plan for the project:
 - Import most of the measure and control stuff from the old project
 
 What now:
+
 Just created this project and made blinky code. Next step is to create a proper scheduler and make 2 state machines, one for LED and another for the main process.
 

@@ -22,5 +22,12 @@ Below is a rough plan for the project:
 
 What now:
 
-Just created this project and made blinky code. Next step is to create a proper scheduler and make 2 state machines, one for LED and another for the main process.
+Scheduler and blinky are done. Working on storing data in FLASH. Erase and write seem to be working in config.c, next steps:
+1. Think how to organize data in FLASH.
+2. Implement CAN.
+3. Create an interface to load and store data via CAN bus, right now all testing is done by compiling the code and it is annoying.
+4. Only double words can be written into flash. After writing "0x ffff0000 ffffff00" ST-Link utility shows "0x ffffff00 ffff0000". Word order, watch out!
+5. If FLASH is locked between programming different addresses, values at both addresses turn to zero. Do not know what is going on.
+
+
 

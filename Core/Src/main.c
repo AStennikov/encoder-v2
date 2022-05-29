@@ -29,6 +29,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "scheduler.h"
+#include "config.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,7 +98,7 @@ int main(void)
   MX_TIM3_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  FlashWrite();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,7 +106,7 @@ int main(void)
   while (1)
   {
     HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-    SchedulerWaitFor(1000);
+    SchedulerWaitFor(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
